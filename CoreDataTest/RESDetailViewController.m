@@ -10,6 +10,7 @@
 
 @interface RESDetailViewController ()
 - (void)configureView;
+
 @end
 
 @implementation RESDetailViewController
@@ -26,15 +27,6 @@
     }
 }
 
-- (void)configureView
-{
-    // Update the user interface for the detail item.
-
-    if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
-    }
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -46,6 +38,14 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)configureView
+{
+    // Update the user interface for the detail item.
+    if (self.detailItem) {
+        self.detailDescriptionLabel.text = [self.detailItem description];
+    }
 }
 
 @end

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
-@interface RESMasterViewController : UITableViewController
+@interface RESMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
 @end

@@ -19,6 +19,8 @@
 		5911988817932EDB00B2331B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5911988617932EDB00B2331B /* MainStoryboard.storyboard */; };
 		5911988B17932EDB00B2331B /* RESMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5911988A17932EDB00B2331B /* RESMasterViewController.m */; };
 		5911988E17932EDB00B2331B /* RESDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5911988D17932EDB00B2331B /* RESDetailViewController.m */; };
+		59119896179348EE00B2331B /* CoreDataTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 59119894179348EE00B2331B /* CoreDataTest.xcdatamodeld */; };
+		5911989817934AF900B2331B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5911989717934AF900B2331B /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		5911988A17932EDB00B2331B /* RESMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RESMasterViewController.m; sourceTree = "<group>"; };
 		5911988C17932EDB00B2331B /* RESDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RESDetailViewController.h; sourceTree = "<group>"; };
 		5911988D17932EDB00B2331B /* RESDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RESDetailViewController.m; sourceTree = "<group>"; };
+		59119895179348EE00B2331B /* CoreDataTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataTest.xcdatamodel; sourceTree = "<group>"; };
+		5911989717934AF900B2331B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5911989817934AF900B2331B /* CoreData.framework in Frameworks */,
 				5911986F17932EDB00B2331B /* UIKit.framework in Frameworks */,
 				5911987117932EDB00B2331B /* Foundation.framework in Frameworks */,
 				5911987317932EDB00B2331B /* CoreGraphics.framework in Frameworks */,
@@ -78,6 +83,7 @@
 			children = (
 				5911986E17932EDB00B2331B /* UIKit.framework */,
 				5911987017932EDB00B2331B /* Foundation.framework */,
+				5911989717934AF900B2331B /* CoreData.framework */,
 				5911987217932EDB00B2331B /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
@@ -101,6 +107,7 @@
 		5911987517932EDB00B2331B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				59119894179348EE00B2331B /* CoreDataTest.xcdatamodeld */,
 				5911987617932EDB00B2331B /* CoreDataTest-Info.plist */,
 				5911987717932EDB00B2331B /* InfoPlist.strings */,
 				5911987A17932EDB00B2331B /* main.m */,
@@ -183,6 +190,7 @@
 				5911987F17932EDB00B2331B /* RESAppDelegate.m in Sources */,
 				5911988B17932EDB00B2331B /* RESMasterViewController.m in Sources */,
 				5911988E17932EDB00B2331B /* RESDetailViewController.m in Sources */,
+				59119896179348EE00B2331B /* CoreDataTest.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +315,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		59119894179348EE00B2331B /* CoreDataTest.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				59119895179348EE00B2331B /* CoreDataTest.xcdatamodel */,
+			);
+			currentVersion = 59119895179348EE00B2331B /* CoreDataTest.xcdatamodel */;
+			path = CoreDataTest.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5911986317932EDB00B2331B /* Project object */;
 }
