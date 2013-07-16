@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "CoreDataTableViewController.h"
 
-@interface RESMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@interface RESMasterViewController : CoreDataTableViewController <NSFetchedResultsControllerDelegate>
+
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activitySpinner;
 
 @end
