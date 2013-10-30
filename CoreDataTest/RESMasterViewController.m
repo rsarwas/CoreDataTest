@@ -104,9 +104,12 @@
     //[author setValue:@"First name" forKey:@"firstname"];
     //[author setValue:@"Notes" forKey:@"notes"];
     int code = rand() % 99;
+    int kids = rand() % 9;
     [author setValue:[NSString stringWithFormat:@"Smith_%u", code] forKey:@"lastname"];
     [author setValue:[NSString stringWithFormat:@"Agent_%u", code] forKey:@"firstname"];
     [author setValue:[NSString stringWithFormat:@"Eaten %u pizzas", code] forKey:@"notes"];
+    [author setValue:[NSNumber numberWithInt:kids] forKey:@"kids"];
+    [author setValue:[NSDate date] forKey:@"birthdate"];
     //NSFetchRequestController will notice the insert, then call its delegate to update the table view
     //if you try to do this now, the controller might not know about the new object.
     //NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];

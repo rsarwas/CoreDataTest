@@ -8,6 +8,8 @@
 
 #import "RESAppDelegate.h"
 #import "RESMasterViewController.h"
+#import "RESManagedDocument.h"
+
 #import <CoreData/CoreData.h>
 
 #define FILE_NAME @"res_core_data"
@@ -17,7 +19,7 @@
 
 @property (weak, nonatomic)  UIActivityIndicatorView *activitySpinner;
 @property (strong, nonatomic) NSURL *url;
-@property (strong, nonatomic) UIManagedDocument *document;
+@property (strong, nonatomic) RESManagedDocument *document;
 @property (weak, nonatomic) RESMasterViewController *masterVC;
 //@property (strong, nonatomic) NSFetchedResultsController *fetchController;
 
@@ -145,7 +147,7 @@
 //Async Loader, wait for documentIsReady, documentOpenFailed, or documentCreateFailed
 - (void) openDocument
 {
-    self.document = [[UIManagedDocument alloc] initWithFileURL:self.url];
+    self.document = [[RESManagedDocument alloc] initWithFileURL:self.url];
     BOOL documentExists = [[NSFileManager defaultManager] fileExistsAtPath:[self.url path]];
     if (documentExists) {
         [self.document openWithCompletionHandler:^ (BOOL success) {
