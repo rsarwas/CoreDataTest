@@ -13,6 +13,7 @@
 
 + (NSManagedObjectModel *) createMOM;
 + (NSManagedObjectModel *) modifyMOM;
++ (NSManagedObjectModel *) momWithProtocol:(NSDictionary *)protocol;
 + (NSManagedObjectModel *) momWithJSONString:(NSString *)json;
 + (NSManagedObjectModel *) momWithJSONData:(NSData *)json;
 @end

@@ -79,9 +79,20 @@
 }
 
 
++ (NSManagedObjectModel *) momWithProtocol:(NSDictionary *)protocol
+{
+    NSManagedObjectModel *mom = [NSManagedObjectModel mergedModelFromBundles:nil];
+    NSArray *attribs = protocol[@"objectmodel"];
+    if (attribs)
+        mom = [self mergeMom:mom entity:@"Author" attributes:attribs];
+    return mom;
+}
+
+
 + (NSManagedObjectModel *) momWithJSONData:(NSData *)json
 {
     NSManagedObjectModel *mom = [NSManagedObjectModel mergedModelFromBundles:nil];
+    NSLog(@"json: %@", [[NSString alloc] initWithData:json encoding:NSUTF8StringEncoding]);
 
     NSArray *attribs = [NSJSONSerialization JSONObjectWithData:json options:0 error:nil];
     if (attribs)

@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		3967750217946CE7009ECD34 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3967750117946CE7009ECD34 /* CoreDataTableViewController.m */; };
 		3988420818207AD600C1E964 /* RESCustomMOM.m in Sources */ = {isa = PBXBuildFile; fileRef = 3988420718207AD600C1E964 /* RESCustomMOM.m */; };
+		39EEE9DF182D65A000C334E2 /* protocol.json in Resources */ = {isa = PBXBuildFile; fileRef = 39EEE9DE182D65A000C334E2 /* protocol.json */; };
 		39F7DD05182088170037E99C /* RESManagedDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F7DD04182088170037E99C /* RESManagedDocument.m */; };
+		39F7DD091821C6280037E99C /* attributes.json in Resources */ = {isa = PBXBuildFile; fileRef = 39F7DD0618217BAF0037E99C /* attributes.json */; };
 		5911986F17932EDB00B2331B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5911986E17932EDB00B2331B /* UIKit.framework */; };
 		5911987117932EDB00B2331B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5911987017932EDB00B2331B /* Foundation.framework */; };
 		5911987317932EDB00B2331B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5911987217932EDB00B2331B /* CoreGraphics.framework */; };
@@ -31,6 +33,7 @@
 		3967750117946CE7009ECD34 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
 		3988420618207AD600C1E964 /* RESCustomMOM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESCustomMOM.h; sourceTree = "<group>"; };
 		3988420718207AD600C1E964 /* RESCustomMOM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESCustomMOM.m; sourceTree = "<group>"; };
+		39EEE9DE182D65A000C334E2 /* protocol.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = protocol.json; path = ../../../../../Desktop/protocol.json; sourceTree = "<group>"; };
 		39F7DD03182088170037E99C /* RESManagedDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESManagedDocument.h; sourceTree = "<group>"; };
 		39F7DD04182088170037E99C /* RESManagedDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESManagedDocument.m; sourceTree = "<group>"; };
 		39F7DD0618217BAF0037E99C /* attributes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = attributes.json; sourceTree = "<group>"; };
@@ -133,6 +136,7 @@
 				5911988217932EDB00B2331B /* Default@2x.png */,
 				5911988417932EDB00B2331B /* Default-568h@2x.png */,
 				39F7DD0618217BAF0037E99C /* attributes.json */,
+				39EEE9DE182D65A000C334E2 /* protocol.json */,
 				39F7DD07182185CE0037E99C /* attrib2.json */,
 			);
 			name = "Supporting Files";
@@ -190,8 +194,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39F7DD091821C6280037E99C /* attributes.json in Resources */,
 				5911987917932EDB00B2331B /* InfoPlist.strings in Resources */,
 				5911988117932EDB00B2331B /* Default.png in Resources */,
+				39EEE9DF182D65A000C334E2 /* protocol.json in Resources */,
 				5911988317932EDB00B2331B /* Default@2x.png in Resources */,
 				5911988517932EDB00B2331B /* Default-568h@2x.png in Resources */,
 				5911988817932EDB00B2331B /* MainStoryboard.storyboard in Resources */,

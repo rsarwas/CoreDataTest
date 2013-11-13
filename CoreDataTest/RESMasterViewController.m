@@ -9,8 +9,6 @@
 #import "RESMasterViewController.h"
 #import "RESDetailViewController.h"
 
-#define FILE_NAME @"res_core_data"
-
 @interface RESMasterViewController ()
 
 @end

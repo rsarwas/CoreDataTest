@@ -12,7 +12,7 @@
 
 #import <CoreData/CoreData.h>
 
-#define FILE_NAME @"res_core_data"
+#define FILE_NAME @"res_core_data4"
 
 
 @interface RESAppDelegate()
@@ -147,9 +147,11 @@
 //Async Loader, wait for documentIsReady, documentOpenFailed, or documentCreateFailed
 - (void) openDocument
 {
-    self.document = [[RESManagedDocument alloc] initWithFileURL:self.url];
+    NSLog(@"RESAppDelegate.openDocument");
     BOOL documentExists = [[NSFileManager defaultManager] fileExistsAtPath:[self.url path]];
     if (documentExists) {
+        NSLog(@"  open existing document at %@", self.url);
+        self.document = [[RESManagedDocument alloc] initWithFileURL:self.url];
         [self.document openWithCompletionHandler:^ (BOOL success) {
             if (success)
                 [self documentIsReady];
@@ -159,13 +161,43 @@
     }
     else
     {
+        NSLog(@"  create new document at %@", self.url);
+        // put the protocol where the managed document can find it
+        // UIManagedDocument creates the MOM in the init method (since it happens in super,
+        // I cannot set an instance variable before the MOM is configured
+        [self stashDefaultProtocol];
+        self.document = [[RESManagedDocument alloc] initWithFileURL:self.url];
         [self.document saveToURL:self.url forSaveOperation:UIDocumentSaveForCreating completionHandler:^ (BOOL success) {
             if (success)
+            {
+                NSLog(@"  new document created");
+                [self.document saveProtocol];
                 [self documentIsReady];
-            else
+            } else {
                 [self documentCreateFailed];
+            }
         }];
     }
+}
+
+- (void) stashDefaultProtocol
+{
+    NSLog(@"RESAppDelegate.loadSampleProtocol");
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"protocol" ofType:@"json"];
+    NSString *toPath = [[RESManagedDocument defaultProtocolPath] path];
+    [[NSFileManager defaultManager] copyItemAtPath:path toPath:toPath error:nil];
+    //FIXME - check the error after copy, and deal with it
+}
+
+-(NSDictionary *) loadSampleProtocol
+{
+    NSLog(@"RESAppDelegate.loadSampleProtocol");
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"protocol" ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    if (!data) {
+        return nil;
+    }
+    return [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
 }
 
 //Async Closer, wait for documentIsClosed, documentSaveFailed, or documentCloseFailed
