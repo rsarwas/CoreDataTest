@@ -112,7 +112,8 @@ NSManagedObjectModel *_myManagedObjectModel;
     NSString *to = [[self.fileURL path] stringByAppendingPathComponent:kProtocolFilename];
     NSLog(@"  moving from: %@ to %@", from, to);
     NSError *error;
-    [[NSFileManager defaultManager] moveItemAtPath:from toPath:to error:&error];
+    //[[NSFileManager defaultManager] moveItemAtPath:from toPath:to error:&error];
+    [[NSFileManager defaultManager] copyItemAtPath:from toPath:to error:&error];
     if (error)
     {
         //FIXME - check the error an respond appropriately
