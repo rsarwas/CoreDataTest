@@ -1,0 +1,55 @@
+//Array of dictionaries
+// dictionary keys, valuetypes, description are as follows
+//  name, string, the database field name, REQUIRED, must not conflict with NSObject method names like font and color.
+//  description, string, a user friendly alias for the field name (if omitted, name is used)
+//  type, integer, the database type - defined by the NSAttributeType enum, REQUIRED
+//		0    = undefined
+//		100  = int16
+//		200  = int32
+//		300  = int64
+//		400  = decimal
+//		500  = double (64bit)
+//		600  = float (32bit)
+//		700  = string
+//		800  = boolean
+//		900  = date
+//		1000 = binary blob
+//		1800 = transormable
+//		2000 = object pointer (id)
+
+//  optional, boolean, flag if this attribute is required or not, default is false
+//  default, varies, a default value for the field, json type must match core data type,
+//  domain, array, list of values (of correct type) which constrain valid input
+//  codeddomain, array of maps with keys code and text
+//     code is a value that matches the database type
+//     text is a picklist value for that code
+//  constraints, array of maps with keys predicate and warning
+//     predicate is the constraint requirement, see
+//     warning is the text to display when the predicate fails
+[
+  {
+  "name" : "birthdate",
+ "description" : "Birth day",
+  "type" : 900,
+  "optional" : false
+  },
+  {
+  "name" : "species",
+  "type" : 700,
+  "optional" : false,
+  "default" : "Bear"
+  "domain" : ["Bear", "Wolf", "Moose"]
+  },
+  {
+  "name" : "kids",
+  "type" : 200,
+  "optional" : false,
+  "default" : 0
+  "constraints" :
+  [
+   {
+   "predicate" : "SELF >= 0"
+   "warning" : "Kid count must be non-negative"
+   }
+   ]
+  ]

@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
-@interface RESDetailViewController : UIViewController
+@interface RESDetailViewController : UITableViewController
 
 @property (strong, nonatomic) id detailItem;
 

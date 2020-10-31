@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3965ED03183C192100701F8A /* protocol.json in Resources */ = {isa = PBXBuildFile; fileRef = 3965ED02183C192100701F8A /* protocol.json */; };
+		3967750217946CE7009ECD34 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3967750117946CE7009ECD34 /* CoreDataTableViewController.m */; };
+		3988420818207AD600C1E964 /* RESCustomMOM.m in Sources */ = {isa = PBXBuildFile; fileRef = 3988420718207AD600C1E964 /* RESCustomMOM.m */; };
+		39F7DD05182088170037E99C /* RESManagedDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F7DD04182088170037E99C /* RESManagedDocument.m */; };
+		39F7DD091821C6280037E99C /* attributes.json in Resources */ = {isa = PBXBuildFile; fileRef = 39F7DD0618217BAF0037E99C /* attributes.json */; };
 		5911986F17932EDB00B2331B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5911986E17932EDB00B2331B /* UIKit.framework */; };
 		5911987117932EDB00B2331B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5911987017932EDB00B2331B /* Foundation.framework */; };
 		5911987317932EDB00B2331B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5911987217932EDB00B2331B /* CoreGraphics.framework */; };
@@ -24,6 +29,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3965ED02183C192100701F8A /* protocol.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = protocol.json; sourceTree = "<group>"; };
+		3967750017946CE7009ECD34 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
+		3967750117946CE7009ECD34 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
+		3988420618207AD600C1E964 /* RESCustomMOM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESCustomMOM.h; sourceTree = "<group>"; };
+		3988420718207AD600C1E964 /* RESCustomMOM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESCustomMOM.m; sourceTree = "<group>"; };
+		39F7DD03182088170037E99C /* RESManagedDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESManagedDocument.h; sourceTree = "<group>"; };
+		39F7DD04182088170037E99C /* RESManagedDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESManagedDocument.m; sourceTree = "<group>"; };
+		39F7DD0618217BAF0037E99C /* attributes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = attributes.json; sourceTree = "<group>"; };
+		39F7DD07182185CE0037E99C /* attrib2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = attrib2.json; sourceTree = "<group>"; };
 		5911986B17932EDB00B2331B /* CoreDataTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5911986E17932EDB00B2331B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5911987017932EDB00B2331B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -92,6 +106,8 @@
 		5911987417932EDB00B2331B /* CoreDataTest */ = {
 			isa = PBXGroup;
 			children = (
+				3967750017946CE7009ECD34 /* CoreDataTableViewController.h */,
+				3967750117946CE7009ECD34 /* CoreDataTableViewController.m */,
 				5911987D17932EDB00B2331B /* RESAppDelegate.h */,
 				5911987E17932EDB00B2331B /* RESAppDelegate.m */,
 				5911988617932EDB00B2331B /* MainStoryboard.storyboard */,
@@ -100,6 +116,10 @@
 				5911988C17932EDB00B2331B /* RESDetailViewController.h */,
 				5911988D17932EDB00B2331B /* RESDetailViewController.m */,
 				5911987517932EDB00B2331B /* Supporting Files */,
+				3988420618207AD600C1E964 /* RESCustomMOM.h */,
+				3988420718207AD600C1E964 /* RESCustomMOM.m */,
+				39F7DD03182088170037E99C /* RESManagedDocument.h */,
+				39F7DD04182088170037E99C /* RESManagedDocument.m */,
 			);
 			path = CoreDataTest;
 			sourceTree = "<group>";
@@ -107,6 +127,7 @@
 		5911987517932EDB00B2331B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3965ED02183C192100701F8A /* protocol.json */,
 				59119894179348EE00B2331B /* CoreDataTest.xcdatamodeld */,
 				5911987617932EDB00B2331B /* CoreDataTest-Info.plist */,
 				5911987717932EDB00B2331B /* InfoPlist.strings */,
@@ -115,6 +136,8 @@
 				5911988017932EDB00B2331B /* Default.png */,
 				5911988217932EDB00B2331B /* Default@2x.png */,
 				5911988417932EDB00B2331B /* Default-568h@2x.png */,
+				39F7DD0618217BAF0037E99C /* attributes.json */,
+				39F7DD07182185CE0037E99C /* attrib2.json */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -171,11 +194,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39F7DD091821C6280037E99C /* attributes.json in Resources */,
 				5911987917932EDB00B2331B /* InfoPlist.strings in Resources */,
 				5911988117932EDB00B2331B /* Default.png in Resources */,
 				5911988317932EDB00B2331B /* Default@2x.png in Resources */,
 				5911988517932EDB00B2331B /* Default-568h@2x.png in Resources */,
 				5911988817932EDB00B2331B /* MainStoryboard.storyboard in Resources */,
+				3965ED03183C192100701F8A /* protocol.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,11 +211,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3988420818207AD600C1E964 /* RESCustomMOM.m in Sources */,
 				5911987B17932EDB00B2331B /* main.m in Sources */,
 				5911987F17932EDB00B2331B /* RESAppDelegate.m in Sources */,
 				5911988B17932EDB00B2331B /* RESMasterViewController.m in Sources */,
 				5911988E17932EDB00B2331B /* RESDetailViewController.m in Sources */,
+				39F7DD05182088170037E99C /* RESManagedDocument.m in Sources */,
 				59119896179348EE00B2331B /* CoreDataTest.xcdatamodeld in Sources */,
+				3967750217946CE7009ECD34 /* CoreDataTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,7 +306,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CoreDataTest/CoreDataTest-Prefix.pch";
 				INFOPLIST_FILE = "CoreDataTest/CoreDataTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -289,7 +319,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CoreDataTest/CoreDataTest-Prefix.pch";
 				INFOPLIST_FILE = "CoreDataTest/CoreDataTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -313,6 +345,7 @@
 				5911989317932EDB00B2331B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
